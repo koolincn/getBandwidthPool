@@ -5,4 +5,4 @@ RUN yum install -y python3
 RUN curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py
 RUN python3 get-pip.py
 RUN pip install softlayer
-CMD python3 /getBandwidthPool/getbandwidthpool.py > tempxx.log
+CMD python3 /getBandwidthPool/getbandwidthpool.py > bandwidth-result-`date +%y%m%d%h`.log
