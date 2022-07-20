@@ -1,0 +1,7 @@
+FROM icr.io/codeengine/alpine
+CMD mkdir /getBandwidthPool
+ADD getbandwidthpool.py /getBandwidthPool/getbandwidthpool.py
+RUN yum install -y python
+RUN python get-pip.py
+RUN pip install softlayer
+CMD  /getBandwidthPool/getbandwidthpool.py > tempxx.log
